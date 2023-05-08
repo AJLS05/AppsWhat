@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/materialize.css">
+    <title>AppsWhats</title>
+  </head>
+  <!-- NOTAS-->
+   <!-- 1)tratar de cambiar la muestra de los emojis y hacer el script sirectamente en el codigo-->
+    <!--2)Sacar el value del file y agregarlo al val de la txt comentarios para la logic-->
+     <!-- 3)Agragr el file y que muestre la imagen correspondiente a cada opcion en los floats-->
+      <!-- 4)Cambiar el diseño de las tablas en las que se muestran los msj-->
+       <!-- 5)Ordenar el css por tipos(tag,id,class)-->
+        <!-- 6)Agregar el icon del done_all a las tablas para ambas flechitas-->
+         <!-- 7)Recordar a Makoto de la promesa de como sacar la id de un elemento-->
+  <body>
+    <div id="barritaverde" class="jumbotron">
+    </div>
+
+    <div id="contenedorpr">
+
+
+      <!-- done_all = Visto, chat = chat, delete = borrar, person_pin = boton usuario, mic_none = microfono, schedule = relojcito, videocam = video, contacts = contactos-->
+
+
+      <!-- BARRA DERECHA-->
+      <div id="LATERALIZQUIERDADESPLEGABLE">
+
+
+
+
+
+        <!-- ESTE ES EL SIDE DE LOS COCTACTOS(AGREGAR)-->
+               <nav class="w3-sidenav w3-white w3-card-2 w3-animate-left tamanoside" style="display:none" id="contactos">
+                <div>
+
+                <div class="buscarcontactos">
+                  <div class="userView" id="Tituloverde">
+                  <b><h5><a onclick="closecontactos()" class="w3-closenav">
+                      <i id = "flecha"  class="small material-icons">reply</i>
+                    </a>Agregar contactos</h5></b>
+                    <div  id="mover" class="card-action">
+
+              <input id="numerodetelefono" type ="text" placeholder="El numero del usuario">
+                <input id="nombredelcontacto" type ="text" placeholder="El nombre del usuario">
+                  <input id="Estadodelcontacto" type ="text" placeholder="Estado del contacto">
+                   <input class="with-gap" name="sexo" type="radio" id="masculino" checked />
+       <label for="masculino">M</label>
+
+       <input class="with-gap" name="sexo" type="radio" id="femenino" />
+<label for="femenino">F</label>
+
+
+                  <button id="guardarcontac"> Guardar</button>
+
+
+
+
+
+                <!-- Espacio salvaje aparece!( para: PROBAR OVERFLOW)-->   <br><br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        <!-- AQUI TERMINA EL SIDE CONTACTOS CREADOS-->
+
+
+
+
+        <!-- ESTE ES EL SIDE DE LOS MENSAJES(INICIAR NUEVO CHAT)-->
+               <nav class="w3-sidenav w3-white w3-card-2 w3-animate-left tamanoside" style="display:none" id="leftMenu">
+                <div>
+
+                <div class="buscarcontactos">
+                  <div class="userView" id="Tituloverde">
+                  <b><h5><a onclick="closeLeftMenu()" class="w3-closenav">
+                      <i id = "flecha"  class="small material-icons">reply</i>
+                    </a>Nuevo chat</h5></b>
+                    <div  id="mover" class="card-action">
+
+                       <input placeholder="buscar o empezar un chat nuevo" id="busqueda" type="text" class="validate">
+                       <div id="muestrachats2">
+                         <br>
+                         aqui se deberian mostrar
+                            AQUI VAN LOS MSJS QUE AUN NO ESTAN (CLAU RECUERDA PASAR EL CODIGO QUE TIENES A UNA FUNCION QUE RECIBA UN ARR Y FORTEA PARA METER LOS MSJ AQUI)
+                       </div>
+
+
+
+                <!-- Espacio salvaje aparece!( para: PROBAR OVERFLOW)-->   <br><br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        <!-- AQUI TERMINA EL SIDE LOS MENSJES(INICIAR NUEVO CHAT)-->
+
+          <!-- SIDE DEL PERFIL-->
+        <nav class="w3-sidenav w3-white w3-card-2 w3-animate-left tamanoside" style="display:none" id="mySidenav">
+        	<div>
+              <div class="userView" id="Tituloverde">
+       <a href="#" onclick="w3_close()" id="atras">
+                          	<i id = "flecha" class="small material-icons">reply</i>
+                                    <b><h5>Perfil y estado</h5></b>
+
+
+                                <a   class="button-collapse waves-effect  btn-flat "  ><img id="imgperfil" src="imagenes/perfil1.jpg" alt="" /></a>
+                                </div>
+                                  <img  class="materialboxed" data-caption="La foto del perfil" width="250" src="imagenes/perfil1.jpg"  id="redondo">
+                               <br>
+                <center>
+                  <table class="usuarios">
+                                   <tr> <td><p >Tu nombre</p> </td></tr>
+                                   <tr><td><input id="cajadelnombre" value="Ally y clau" type="text" length="10" ><i class="material-icons tiny" id="botoneditar">mode_edit</i>
+                                     </td></tr>
+                   </table>
+                   </center>
+                                              <br>
+                               <center>
+                               <table class="usuarios2">
+                                   <tr><td><p >Estado</p></td></tr>
+
+                                   <tr> <td> <input id="cajadelnombre" value="Esto es un estado de prueba ,holi!" type="text" length="150" ><i class="material-icons tiny" id="botoneditar">mode_edit</i>
+                                     </td> </tr>
+                               </table>
+                               </center>
+        			</nav>
+                  <!--!!!!!!!!!!!!!!! AQUI TERMINA EL SIDE DEL PERFIL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+
+
+
+
+    <!-- PANEL SUPERIOR (DONDE VA LA IMAGEN Y LAS OPCIONES DEL PERFIL)-->
+
+        <div id="cardderecha" class="card">
+    <!-- Boton que abre el side de la derecha-->
+<span class="w3-opennav w3-xlarge" onclick="w3_open()"><a href="#" id="btnimgperfil" class='dropdown-button btn color btn-flat' href='#' ><img id="imgperfil" src="imagenes/perfil1.jpg" alt="" /></a></span>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!AQUI TERMINA EL BOTON QUE ABRE EL PERFIL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+
+
+
+
+
+        <!-- EL DROP DOWN DE LAS OPCIONES-->
+  <div id="opcioneschat" >
+    <!-- El boton que desgliega EL SIDE DE LOS CHATS-->
+        <span id="derecha"  onclick="openLeftMenu()" <a href="#"  class="w3-opennav w3-xlarge button-collapse  waves-teal btn-flat tooltipped" data-tooltip="Nuevo chat" data-position="bottom"><i class="material-icons">chat</i></a></span>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!AQUI TERMINA EL BOTON !!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+    <a class='dropdown-button btn color btn-flat'  href='#' data-activates='dropdown1'><img class="imagen" src="imagenes/puntos.png"></a>
+   <ul id='dropdown1' class='dropdown-content '>
+     <li><a onclick="w3_open()">Perfil y estado</a></li>
+    <li><a onclick="opencontactos()">Agregar contactos</a></li>
+     <li class="divider">Destacado</li>
+      <li><a href="#!">Cerrar Sesion</a></li>
+
+   </ul>
+  </div>
+</div>
+
+
+
+    <!-- INICIA LA CARD DE LA IZQUIERDA(SI ERROR MIO.....CONFUNCI LOS NOMBRES Y LAS POSCIONES :))-->
+<div id="derecha" class="card">
+  <div  id ="carddecontactos1" >
+        <!-- AQUI ESTA EL CONTENEDOR DE LA CAJA DE BUSQUEDA DE CONTACTOS-->
+             <div class="card-content" id="cajadebusqueda">
+                      <i class="material-icons prefix" >search</i>
+              <input placeholder="buscar o empezar un chat nuevo" id="busqueda" type="text" class="validate">
+             </div>
+                 <!-- AQUI TERMINA EL CONTENEDOR DE LA BUSQUEDA-->
+
+
+     <!-- LA MUESTRA DE UNO DE LOS CONTACTO vacio-->
+
+<div class="contacto" class="card-action prueba1">
+<div class="contacto"class="card-content"><br>
+<a id="btnimgperfil" class="waves-teal btn-flat"><img id="imgperfil" src="imagenes/perfil1.jpg" alt="" /></a>  <p>Prueba</p>
+
+</div>
+<div id="contacto" class="card-action ">
+Hola!solo soy un adorno
+<br>
+
+</div>
+</div>
+ <!-- FIN DE LA MUESTRA DE CONTACTO-->
+
+ <div id="muestrachats">
+   <br>
+<center> <font color="D8D8D8">Aun no tienes ningun contacto animate y agregalos!<font></center>
+ </div>
+
+
+       </div>
+      </div>
+      </div>
+
+ <!-- ESTE ES EL CONTENEDOR DE LA DERECHA AL QUE NOMBRE IZQUIERDA POR ACCIDENTE-->
+      <div id="cardizquierda" class="card">
+
+         <!-- El boton flotante(PD: TRATA DE RECORDAR COMO PONERLE LA IMAGEN AL INPUT)-->
+        <div  class="fixed-action-btn horizontal  click-to-toggle"  style="top: 25px; right: 130px;">
+          <a class="btn-floating btn-small color btn-flat">
+      <i id="coloricon" class="material-icons tooltipped" data-tooltip="Adjuntar" data-position="bottom"> <span class="glyphicon glyphicon-paperclip"> </span> </i>
+          </a>
+          <br>
+          <ul>
+          <br>
+          <br>
+          <li><a id="abajo" class="btn-floating blue btn tooltipped file-field input-field"  data-tooltip="Imagenes" data-position="left"><input type="file"value="1"><i class="large material-icons">perm_media</i></a></li>
+                  <br>
+        <li><a id="abajo" class="btn-floating blue btn tooltipped file-field input-field"  data-tooltip="Documentos" data-position="left"><input type="file"value="1"><i class="large material-icons">description</i></a></li>
+        <br>
+        <li><a id="abajo" class="btn-floating blue btn tooltipped file-field input-field"  data-tooltip="Contactos" data-position="left"><input type="file"value="1"><i class="large material-icons">contacs</i></a></li>
+          <br>
+          </ul>
+        </div>
+         <!-- Aqui termina el flotante-->
+
+ <!--DROPDOWM DE LAS OPCIONES DEL CHAT-->
+      <div id="opcioneschat" >
+        <a class='dropdown-button btn color btn-flat '  href='#' data-activates='dropdown2'><img class="imagen" src="imagenes/puntos.png"></a>
+       <ul id='dropdown2' class='dropdown-content '>
+         <li id="ilineardropdowm"><a href="#!">Info.contacto</a></li>
+         <li><a href="#!">Eliminar msjs</a></li>
+         <li class="divider">Eliminar conversacion</li>
+         <li><a href="#!">Silenciar</a></li>
+       </ul>
+      </div>
+       <!-- AQUI TERMINA-->
+
+      </div>
+
+ <!-- MUESTRA DE LOS MENSAJES EN EL FONDO-->
+      <div id="izquierda" class="card">
+
+        <div  id ="carddecontactos" >
+                   <div id="muestradecomentar"  class="card-content">
+              <div id="muestradecomentar1">
+
+
+              </div>
+                   </div>
+
+
+                   <div id="cajademensaje" class="card-action">
+
+
+
+                     <div  class="input-field col s6">
+
+                       <form name="form1" method="post" action="javascript:enviar(this.form1)">
+
+
+                          <a id="emoji" class=" waves-teal btn-flat dropdown-button btn tooltipped"  data-position="top" data-activates='dropemojis' data-tooltip="Emoticones">  <i class="material-icons colorv">tag_faces</i></a>
+
+                      <i class="material-icons colorv" onclick="Materialize.toast('Mensaje enviado', 400S0,'rounded')">send</i></a>
+                      <input type="text" id="mensaje" class="validate" placeholder="Escriba su mensaje">
+                      <input id="enviar" data-position="top" type="submit" name="Submit" class="w3-btn w3-theme waves-teal btn-flat tooltipped" value="" id="boton" data-tooltip="Enviar">
+
+                    </form>
+                  </div>
+                   </div>
+             </div>
+      </div>
+
+       <!-- AQUI TERMINA-->
+
+
+
+ <!-- Muestra de los emojis-->
+
+
+
+ <!-- Dropdown Structure -->
+
+
+
+ <ul id='dropemojis' class='dropdown-content'>
+   <li>
+     <table>
+       <tr>
+        <td ><a class="btn-flat casillasemoj" id="emoji1" ><h5>😀 </h5></a></td>
+         <td><a class="btn-flat casillasemoj" id="emoji2" ><h5>😃</h5></a></td>
+         <td><a class="btn-flat casillasemoj" id="emoji3" ><h5>😉 </h5></a></td>
+          <td><a class="btn-flat casillasemoj" id="emoji4" ><h5>😋</h5></a></td>
+           <td><a class="btn-flat casillasemoj" id="emoji5" ><h5>😍</h5></a></td>
+             <td><a class="btn-flat casillasemoj" id="emoji6" ><h5>😇</h5></a></td>
+              <td><a class="btn-flat casillasemoj" id="emoji7" ><h5>😐</h5></a></td>
+      </tr>
+      <tr>
+       <td ><a class="btn-flat casillasemoj" id="emoji8" ><h5>💎</h5></a></td>
+        <td><a class="btn-flat casillasemoj" id="emoji9" ><h5>💈 </h5></a></td>
+        <td><a class="btn-flat casillasemoj" id="emoji10" ><h5>🚽</h5></a></td>
+         <td><a class="btn-flat casillasemoj" id="emoji11" ><h5>🚿</h5></a></td>
+          <td><a class="btn-flat casillasemoj" id="emoji12" ><h5>🛁</h5></a></td>
+            <td><a class="btn-flat casillasemoj" id="emoji13" ><h5>🎀 </h5></a></td>
+             <td><a class="btn-flat casillasemoj" id="emoji14" ><h5>📻</h5></a></td>
+     </tr>
+
+    <tr>
+     <td ><a class="btn-flat casillasemoj" id="emoji15" ><h5><i class="material-icons">android</i></h5></a></td>
+      <td><a class="btn-flat casillasemoj" id="emoji16" ><h5></h5></a></td>
+      <td><a class="btn-flat casillasemoj" id="emoji17" ><h5></h5></a></td>
+       <td><a class="btn-flat casillasemoj" id="emoji18" ><h5></h5></a></td>
+        <td><a class="btn-flat casillasemoj" id="emoji19" ><h5></h5></a></td>
+          <td><a class="btn-flat casillasemoj" id="emoji20" ><h5></h5></a></td>
+           <td><a class="btn-flat casillasemoj" id="emoji21" ><h5></h5></a></td>
+   </tr>
+   <tr>
+    <td ><a class="btn-flat casillasemoj" id="emoji15" ><h5></h5></a></td>
+     <td><a class="btn-flat casillasemoj" id="emoji16" ><h5></h5></a></td>
+     <td><a class="btn-flat casillasemoj" id="emoji17" ><h5></h5></a></td>
+      <td><a class="btn-flat casillasemoj" id="emoji18" ><h5></h5></a></td>
+       <td><a class="btn-flat casillasemoj" id="emoji19" ><h5></h5></a></td>
+         <td><a class="btn-flat casillasemoj" id="emoji20" ><h5></h5></a></td>
+          <td><a class="btn-flat casillasemoj" id="emoji21" ><h5></h5></a></td>
+  </tr>
+  <tr>
+   <td ><a class="btn-flat casillasemoj" id="emoji15" ><h5>:)</h5></a></td>
+    <td><a class="btn-flat casillasemoj" id="emoji16" ><h5>*.*</h5></a></td>
+    <td><a class="btn-flat casillasemoj" id="emoji17" ><h5>;)</h5></a></td>
+     <td><a class="btn-flat casillasemoj" id="emoji18" ><h5>;*</h5></a></td>
+      <td><a class="btn-flat casillasemoj" id="emoji19" ><h5>:o</h5></a></td>
+        <td><a class="btn-flat casillasemoj" id="emoji20" ><h5>D:</h5></a></td>
+         <td><a class="btn-flat casillasemoj" id="emoji21" ><h5>XD</h5></a></td>
+ </tr>
+     </table>
+
+        </li>
+         </ul>
+
+
+       <!-- AQUI TERMINA LA MUESTRA DE LOS EMOJIS. TRATA DE CAMBIAR LA TABLA POR UN SIDE HACIA ARRIBA QUE TENGA OPCIONES O REVISA LO QUE VISTE HOY EN LA DOCUMENTACION DE MATERIALIZE-->
+
+
+
+
+</div>
+
+<script src="JAVASCRIPT/jquery-2.2.4.js"></script>
+<script src="JAVASCRIPT/materialize.js"></script>
+<script src="JAVASCRIPT/logic.js"></script>
+  </body>
+</html>

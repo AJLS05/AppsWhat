@@ -1,0 +1,460 @@
+#barritaverde{
+  margin: 0;
+  height: 130px;
+  width: 100%;
+  background-color: #408e8a !important;
+}
+
+
+
+#contenedorpr{
+  /*background-color: #fffbfb;*/
+  background-color: rgba(0, 0, 0, .2);
+  position: fixed;
+  top: 20px;
+  left: 5%;
+  width: 92%;
+  height: 90%;
+}
+#barritasuperior{
+  background-color: #eee;
+  width: 100%;
+  height: 10%;
+    display: inline-block;
+}
+
+
+#cardderecha{
+    margin: 0;
+background-color: #eee !important;
+  display: block;
+  height: 8% !important;
+
+}
+
+#cardizquierda{
+  background-color: #eee !important;
+  height: 8% !important;
+    margin: 0;
+  float: right;
+  width: 70%;
+  display: inline-block;
+}
+
+#derecha{
+  margin: 0;
+
+  display: inline-block;
+  height: 95% !important;
+
+}
+
+#izquierda{
+  margin:0;
+  float: right;
+  width: 70%;
+    height: 95% !important;
+  display: inline-block;
+}
+
+#abajo{
+  right: -200%;
+}
+
+.imagen{
+  width: 17px;
+  height: 17px;
+  opacity: 0.4;
+}
+
+
+#opcioneschat{
+  padding-top: 8px;
+float:right;
+margin: 0;
+}
+
+.color{
+  background-color: #eee !important;
+
+
+}
+
+#tabla1{
+  width: 30%;
+}
+
+
+#carddecontactos{
+  margin: 0;
+  width: 100% !important;
+  height: 99% !important;
+}
+
+#carddecontactos1{
+  margin: 0;
+
+  height: 99% !important;
+  display: block;
+}
+
+#muestradecomentar{
+  height: 90% !important;
+background-image: url(../imagenes/fondochat1.jpg);
+}
+
+
+#muestradecomentar1{
+  height: 90% !important;
+
+overflow-y: scroll;
+height: 100%;
+}
+
+
+.card-action{
+
+
+}
+
+.card-content{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#mensaje{
+    border-radius: 7px !important;
+  width: 85% !important;
+display: inline-block;
+background-color: white !important;
+margin: 0!important;
+color: black;
+}
+
+#imgperfil{
+  width: 100%;
+  height:100%!important;
+}
+
+
+#btnimgperfil{
+  padding: 0;
+    width: 10%;
+    height:40px !important;
+      float: left !important;
+      margin-left: 1%;
+      margin-top: 1%;
+      background-color: white;
+      border-radius: 20px;
+}
+
+
+
+#btnimgperfilg{
+  padding: 0;
+    width: 10%;
+    height:40px !important;
+      float: left !important;
+      margin-left: 1%;
+      margin-top: 1%;
+      background-color: white;
+      border-radius: 20px;
+}
+
+
+#enviar{
+    margin: 0;
+  display: inline-block;
+  padding: 0;
+  margin-top: 5px;
+  margin-right: 5% !important;
+    width: 1%;
+    height:30px !important;
+      float:  right !important;
+}
+
+#emoji{
+  display: inline-block;
+  padding: 0;
+  margin-top: 5px;
+    width: 3%;
+    height:30px !important;
+      float:  left !important;
+        color: gray !important;
+}
+
+#cajademensaje{
+
+  background-color: #eee !important;
+  padding: 0;
+  margin: 0;
+
+}
+
+.contacto{
+  padding-right: 2px;
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma","Verdana",serif;
+}
+.contacto:hover{
+    background-color: #eee !important;
+}
+
+#cajadebusqueda{
+    background-color: #dfdfdf !important;
+}
+
+#busqueda{
+  margin: 0;
+margin-top: 5px;
+margin-bottom: 5px;
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white !important;
+}
+
+#sidenav-overlay{
+  opacity: 0 !important ;
+}
+
+#coloricon{
+  color: gray !important;
+}
+.sidenav{
+  margin-left: 1510px !important;
+}
+
+
+#LATERALIZQUIERDADESPLEGABLE{
+
+  width: 30% !important;
+  height: 100% !important;
+  display: inline-block;
+  float: left;
+
+}
+
+
+
+#Tituloverde{
+    background-color: #00bfa5 !important;
+    color: white;
+    height: 30%!important;
+}
+
+#mover{
+  padding: 0 !important;
+  margin: 0 !important;
+    background-color: white!important;
+    color: black;
+    width: 100% !important;
+    height: 100%!important;
+
+}
+
+.tamanoside{
+  width: 27.4% !important;
+  height:95% !important;
+  overflow-y: scroll;
+  display: inline;
+}
+
+.sidemsj{
+  margin-top: 1.4% !important;
+  width: 32.3% !important;
+  height:100% !important;
+  margin-right: 50%!important;
+
+}
+
+
+#btnimgperfilg{
+  background-color: #dfdfdf !important;
+  padding: 0;
+    width: 50%;
+    height:200px !important;
+      margin-left: 20%;
+      margin-top: 16%;
+      background-color: white;
+      border-radius: 100px;
+      display: block;
+}
+
+.bg{
+  margin-top: 14%;
+  display: block;
+  background-color: gray;
+height: 100% !important;
+
+}
+
+#btnimgperfilg:hover{
+  opacity: 0.5;
+}
+
+.carddeinformacion{
+  background-color: gray;
+  width: 70%;
+}
+
+
+.bontoncitograndecito{
+  height: 200px!important;
+}
+
+
+#tablaemojis{
+  background-color: #dfdfdf;
+    border-color: white !important;
+}
+
+.color{
+  color: black !important;
+}
+
+
+.colorv{
+  color: #408e8a !important;
+}
+
+#botonsalir{
+  width: 30px !important;
+  display: inline-block;
+  height: 10px;
+
+}
+
+.usuarios{
+  width: 70%;
+  height: 20px;
+  padding: 0;
+  border-radius: 30px;
+  border-color: black !important;
+  background-color: #F5F5F5;
+}
+
+.usuarios2{
+  width: 70%;
+  height: 20px;
+  padding: 0;
+  border-radius: 30px;
+  border-color: black !important;
+  background-color: #F5F5F5;
+}
+
+
+
+td{
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  height: 20px;
+  text-align: left !important;
+}
+
+#cajadelnombre{
+  height: 10px !important;
+  font-size: 14px;
+  width: 180px;
+  display: inline-block;
+}
+
+#botoneditar{
+  display: inline-block;
+}
+
+#cerrar{
+  width: 10% !important;
+}
+
+#flecha{
+  float: left;
+  display: inline-block;
+}
+
+
+#dropdown1{
+  width: 50% !important;
+}
+
+#dropdown2{
+  width: 20% !important;
+}
+
+
+#ilineardropdowm{
+width: 90% !important;
+}
+
+.mensaje{
+  background-color: white !important;
+}
+
+
+.imagendelcontacto{
+  float:left;
+  width: 30px;
+  height: 30px;
+}
+
+#muestrachats{
+
+
+}
+
+#dropemojis{
+  width: 100% !important;
+  padding-bottom: 2%;
+}
+.msj{
+  background-color: white !important;
+  width: 50%;
+  float: right;
+  font-size: 10px;
+    padding: 2px;
+}
+
+#ilineardropdowm{
+width: 90% !important;
+}
+
+
+.imagendelcontacto{
+  float:left;
+  width: 30px;
+  height: 30px;
+}
+
+
+.mensaje{
+  background-color: white !important;
+}
+
+.mensajito{
+  background-color: #2E64FE;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #0040FF;
+  height: 50px;
+  width: 60%;
+  float: right;
+}
+
+
+
+body{
+  font-family:
+}
+
+
+
+#redondo{
+  border-radius: 100px;
+}
+
+.casillasemoj{
+  width: 1%;
+  background-color: turquoise;
+}
